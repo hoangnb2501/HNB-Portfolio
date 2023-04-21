@@ -1,5 +1,22 @@
-import testimonials from './testimonials';
-export const schemaTypes = [testimonials]
+import abouts from './abouts'
+import brands from './brands'
+import contact from './contact'
+import experiences from './experiences'
+import skills from './skills'
+import testimonials from './testimonials'
+import workExperience from './workExperience'
+import works from './works'
+
+export const schemaTypes = [
+  abouts,
+  brands,
+  contact,
+  experiences,
+  skills,
+  testimonials,
+  workExperience,
+  works,
+]
 
 // // First, We must import the schema creator
 // import createSchema from 'part:@sanity/base/schema-creator';
@@ -11,7 +28,7 @@ export const schemaTypes = [testimonials]
 // export default createSchema({
 //     // We name our schema
 //     name: 'default',
-    
+
 //     // Then proceed to concatenate our document type
 //     // to the ones provided any plugins that are installed
 //     type: schemaTypes.concat([
