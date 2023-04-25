@@ -6,13 +6,13 @@ import { urlFor, client } from '../../client';
 import { AppWrap, MotionWrap } from '../../wrapper';
 
 const About = () => {
-  const [abouts, setAbouts] = useState([]);
+  const [about, setAbout] = useState([]);
 
   useEffect(() => {
-    const query = '*[_type == "abouts"]';
+    const query = '*[_type == "about"]';
     client
       .fetch(query)
-      .then((data) => setAbouts(data))
+      .then((data) => setAbout(data))
       .catch(console.error);
   }, []);
 
@@ -24,7 +24,7 @@ const About = () => {
       </h2>
 
       <div className="app__profiles">
-        {abouts.map((about, index) => (
+        {about.map((about, index) => (
           <motion.div
             whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}

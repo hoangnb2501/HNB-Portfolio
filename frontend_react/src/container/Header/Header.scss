@@ -75,6 +75,9 @@
       width: 100%;
       text-transform: uppercase;
       text-align: right;
+
+      font-size: 1rem;
+      font-weight: 500;
     }
   }
 
@@ -138,13 +141,13 @@
     }
 
     div:nth-child(2) {
-      width: 400px;
-      height: 400px;
+      width: 200px;
+      height: 200px;
     }
 
     div:nth-child(3) {
-      width: 200px;
-      height: 200px;
+      width: 180px;
+      height: 180px;
     }
   }
 

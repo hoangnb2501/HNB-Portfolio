@@ -1,5 +1,5 @@
 import React from 'react';
-import { easeInOut, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { images } from '../../constants';
@@ -21,7 +21,7 @@ const Header = () => {
     <div className="app__header app__flex">
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 1 }}
         className="app__header-info"
       >
         <div className="app__header-badge">
@@ -60,7 +60,7 @@ const Header = () => {
         whileInView={scaleVariants.whileInView}
         className="app__header-circles"
       >
-        {[images.react, images.dotnet, images.sqlserver].map(
+        {[images.express, images.dotnet, images.sqlserver].map(
           (circle, index) => (
             <div className="circle-cmp app__flex" key={`circle-${index}`}>
               <img src={circle} alt="circle" />
