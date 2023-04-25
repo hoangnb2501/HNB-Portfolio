@@ -7,8 +7,8 @@
 
   padding: 1rem 2rem;
   background-color: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
   border: 1px solid rgba(255, 255, 255, 0.18);
 
   position: fixed;
@@ -34,14 +34,14 @@
 .app__navbar-links {
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 
+  margin-left: auto;
   list-style-type: none;
 
   li {
     margin: 0 1rem;
-    cursor: pointer;
 
     flex-direction: column;
 
@@ -55,14 +55,31 @@
     }
 
     a {
-      color: var(--gray-color);
+      cursor: pointer;
       text-decoration: none;
       flex-direction: column;
 
-      text-transform: uppercase;
+      color: var(--gray-color);
+      text-transform: capitalize;
+      font-size: 1rem;
       font-weight: 500;
 
       transition: all 0.4s ease-in-out;
+
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -4px;
+        width: 0;
+        height: 4px;
+        background-color: var(--secondary-color);
+        border-radius: 1rem;
+
+        transition: all 0.4s ease-in-out;
+      }
 
       &:hover {
         color: var(--secondary-color);
@@ -72,6 +89,11 @@
     &:hover {
       div {
         background-color: var(--secondary-color);
+      }
+
+      a::after {
+        left: 0;
+        width: 100%;
       }
     }
   }

@@ -4,6 +4,7 @@ import { client } from '../../client';
 
 import './Footer.scss';
 import { images } from '../../constants';
+import { BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs';
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -54,6 +55,29 @@ const Footer = () => {
           <img src={images.mobile} alt="mobile" />
           <a href="tel: +84 (867) 765 003" className="p-text">
             +84 (867) 765 003
+          </a>
+        </div>
+        <div className="app__footer-card app__footer-card-social">
+          <a
+            href="https://github.com/hoanguyen2501"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <BsGithub />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/hoang-nguyen-ba-nbh251"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <BsLinkedin />
+          </a>
+          <a
+            href="https://instagram.com/hnb.251?igshid=YmMyMTA2M2Y="
+            target="_blank"
+            rel="noreferrer"
+          >
+            <BsInstagram />
           </a>
         </div>
       </div>
