@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { images } from '../../constants';
+import myCV from '../../assets/cv/Backend_Intern_NguyenBaHoang_CV.pdf';
 import './Header.scss';
 
 const scaleVariants = {
@@ -37,6 +38,18 @@ const Header = () => {
             <p className="p-text">Backend Developer</p>
             <p className="p-text">Intern</p>
           </div>
+
+          <div className="tag-cmp app__flex">
+            <a
+              href={myCV}
+              className="p-text"
+              target="_blank"
+              rel="noreferrer"
+              download="Backend_Intern_NguyenBaHoang_CV"
+            >
+              Download CV
+            </a>
+          </div>
         </div>
       </motion.div>
 
@@ -60,13 +73,11 @@ const Header = () => {
         whileInView={scaleVariants.whileInView}
         className="app__header-circles"
       >
-        {[images.express, images.dotnet, images.sqlserver].map(
-          (circle, index) => (
-            <div className="circle-cmp app__flex" key={`circle-${index}`}>
-              <img src={circle} alt="circle" />
-            </div>
-          ),
-        )}
+        {[images.mysql, images.dotnet, images.csharp].map((circle, index) => (
+          <div className="circle-cmp app__flex" key={`circle-${index}`}>
+            <img src={circle} alt="circle" />
+          </div>
+        ))}
       </motion.div>
     </div>
   );
