@@ -2,8 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 import { AppWrap, MotionWrap } from '../../wrapper';
-import { images } from '../../constants';
-import myCV from '../../assets/cv/Backend_Intern_NguyenBaHoang_CV.pdf';
+import { images, doc } from '../../constants';
+
 import './Header.scss';
 
 const scaleVariants = {
@@ -41,7 +41,7 @@ const Header = () => {
 
           <div className="tag-cmp app__flex">
             <a
-              href={myCV}
+              href={doc.mycv}
               className="p-text"
               target="_blank"
               rel="noreferrer"
